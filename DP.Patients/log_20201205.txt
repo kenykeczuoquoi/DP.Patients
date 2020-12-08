@@ -1,0 +1,61 @@
+2020-12-05 09:59:00.138 +01:00 [DBG] Hosting starting
+2020-12-05 09:59:00.345 +01:00 [INF] User profile is available. Using 'C:\Users\Keny\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-12-05 09:59:00.392 +01:00 [DBG] Reading data from file 'C:\Users\Keny\AppData\Local\ASP.NET\DataProtection-Keys\key-c8aa025b-1d56-4904-a660-71f1cb14dbb7.xml'.
+2020-12-05 09:59:00.470 +01:00 [DBG] Found key {c8aa025b-1d56-4904-a660-71f1cb14dbb7}.
+2020-12-05 09:59:00.520 +01:00 [DBG] Considering key {c8aa025b-1d56-4904-a660-71f1cb14dbb7} with expiration date 2021-01-12 19:05:12Z as default key.
+2020-12-05 09:59:00.542 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2020-12-05 09:59:00.550 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2020-12-05 09:59:00.573 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2020-12-05 09:59:00.583 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2020-12-05 09:59:00.591 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2020-12-05 09:59:00.606 +01:00 [DBG] Using key {c8aa025b-1d56-4904-a660-71f1cb14dbb7} as the default key.
+2020-12-05 09:59:00.610 +01:00 [DBG] Key ring with default key {c8aa025b-1d56-4904-a660-71f1cb14dbb7} was loaded during application startup.
+2020-12-05 09:59:01.431 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2020-12-05 09:59:01.495 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 8C55A198932ADDAACC36E40520352B95EAD3AEBF)
+2020-12-05 09:59:01.507 +01:00 [INF] Now listening on: https://localhost:5001
+2020-12-05 09:59:01.511 +01:00 [DBG] Loaded hosting startup assembly DP.Patients
+2020-12-05 09:59:01.514 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-05 09:59:01.516 +01:00 [INF] Hosting environment: Development
+2020-12-05 09:59:01.519 +01:00 [INF] Content root path: C:\Users\Keny\Dysk Google\WWSI\Rozproszone\DP.Patients\DP.Patients
+2020-12-05 09:59:01.521 +01:00 [DBG] Hosting started
+2020-12-05 10:01:07.631 +01:00 [DBG] Connection id "0HM4OVH6RNSCQ" accepted.
+2020-12-05 10:01:07.636 +01:00 [DBG] Connection id "0HM4OVH6RNSCQ" started.
+2020-12-05 10:01:07.822 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/patients  
+2020-12-05 10:01:07.829 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-12-05 10:01:07.832 +01:00 [VRB] All hosts are allowed.
+2020-12-05 10:01:07.876 +01:00 [DBG] 1 candidate(s) found for the request path '/api/patients'
+2020-12-05 10:01:07.882 +01:00 [DBG] Endpoint 'DP.Patients.Controllers.PatientsController.getAll (DP.Patients)' with route pattern 'api/Patients' is valid for the request path '/api/patients'
+2020-12-05 10:01:07.886 +01:00 [DBG] Request matched endpoint 'DP.Patients.Controllers.PatientsController.getAll (DP.Patients)'
+2020-12-05 10:01:07.955 +01:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-12-05 10:01:07.962 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.getAll (DP.Patients)'
+2020-12-05 10:01:07.976 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-12-05 10:01:08.047 +01:00 [INF] Route matched with {action = "getAll", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getAll() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-12-05 10:01:08.052 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-12-05 10:01:08.055 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-12-05 10:01:08.058 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-12-05 10:01:08.063 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-12-05 10:01:08.066 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-12-05 10:01:08.070 +01:00 [DBG] Executing controller factory for controller DP.Patients.Controllers.PatientsController (DP.Patients)
+2020-12-05 10:01:08.276 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-12-05 10:01:08.356 +01:00 [DBG] Executed controller factory for controller DP.Patients.Controllers.PatientsController (DP.Patients)
+2020-12-05 10:01:08.360 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2020-12-05 10:01:08.364 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2020-12-05 10:01:08.367 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2020-12-05 10:01:08.370 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2020-12-05 10:01:08.380 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.getAll (DP.Patients) - Validation state: "Valid"
+2020-12-05 10:01:08.772 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-12-05 10:01:08.928 +01:00 [DBG] queryContext => new QueryingEnumerable<Patient>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Patient>, 
+    DP.Patients.Model.DpDataContext, 
+    null
+)
+2020-12-05 10:01:08.955 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-12-05 10:01:09.027 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (68ms).
+2020-12-05 10:01:09.034 +01:00 [DBG] Opening connection to database 'dp102' on server 'tcp:dp102s9884.database.windows.net,1433'.
+2020-12-05 10:01:30.120 +01:00 [DBG] Connection id "0HM4OVH6RNSCQ" reset.
+2020-12-05 10:01:30.127 +01:00 [DBG] Connection id "0HM4OVH6RNSCQ" sending FIN because: "The client closed the connection."
+2020-12-05 10:01:30.133 +01:00 [DBG] Connection id "0HM4OVH6RNSCQ" disconnecting.

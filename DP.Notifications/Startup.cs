@@ -2,14 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DP.Patients.Model;
-using DP.Patients.Services;
+using DP.Notifications.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -17,33 +15,26 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Logging;
 using Serilog;
 
-namespace DP.Patients
+namespace DP.Notifications
 {
     public class Startup
     {
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-        
-        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddApplicationInsightsTelemetry();
 
 
             services.AddControllers();
 
-            services.AddScoped<ServiceBusSender>();
-            services.AddDbContext<DpDataContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
+            services.AddSingleton<ServiceBusConsumer>();
 
             services.AddAuthentication(options =>
             {
@@ -58,14 +49,13 @@ namespace DP.Patients
             });
 
             IdentityModelEventSource.ShowPII = true;
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
-/*            app.UseSerilogRequestLogging();*/
-
+            app.UseSerilogRequestLogging();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -79,12 +69,13 @@ namespace DP.Patients
 
             app.UseAuthorization();
 
-           
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            var bus = app.ApplicationServices.GetService<ServiceBusConsumer>();
+            bus.Register();
         }
     }
 }
